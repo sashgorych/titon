@@ -1,0 +1,118 @@
+/*------------- Photo Gallery styles -------------------------*/
+#multiupload {
+	margin-bottom: 20px;
+	margin-top: 12px;
+}
+#multiupload span.section-heading {
+	font-size:17px;
+	font-weight:normal;
+	color:#333;
+	display:block;
+	margin-bottom:2px;
+}
+#multiupload .main-functions { margin-bottom:10px; }
+#multiupload .gallery-item {
+	padding-top:5px;
+	padding-bottom:5px;
+	overflow:hidden;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #eeeeee;
+}
+#multiupload .gallery-item .number {
+	width:32px;
+	float:left;
+	color:#000;
+}
+#multiupload .gallery-item .image-preview {
+	width:66px;
+	float:left;
+	margin-right:15px;
+	text-align: center;
+	height: 66px;
+}
+#multiupload .gallery-item .image-data {
+	float:left;
+	width:825px;
+}
+#multiupload .gallery-item .image-data .file-name {
+	font-size:11px;
+	color:#999;
+}
+#multiupload .gallery-item .image-data .description {
+	font-size:12px;
+	color:#333;
+}
+#multiupload .gallery-item .image-data .description p { margin:0px; padding:0px; }
+#multiupload .gallery-item .image-data .description a { font-size:11px; }
+#multiupload .gallery-item .image-data .description input { display:block; width:550px; }
+#multiupload .gallery-item .actions {
+	float:left;
+	padding-top: 25px;
+}
+#multiupload .gallery-item .actions a {
+	display:block;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#multiupload .gallery-item .actions a.del {
+	background-image: url(images/del2.gif);
+	height: 16px;
+	width: 12px;
+	}
+#multiupload .gallery-item .actions a.edit {}
+
+.placeholder {
+height: 121px;
+border: solid 1px orange;
+background: #fffff3;
+}
+
+#cover {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: url(/images/black_50.png) 0 0 repeat;
+   display: none;
+   z-index: 1000;
+}
+
+#zoom {
+   position: absolute;
+/*
+   width: 500px;
+   height: 500px;
+*/
+   background: white;
+   border: solid 2px darkgray;
+   border-radius: 10px;
+   padding: 5px;
+}
+
+a.plupload_del_file {
+   text-decoration: none;
+}
+
+div.upload_progress_bar {
+   height: 10px;
+   width: 400px;
+   background: url(/images/upload_progress_bar.png) -1000px 0 no-repeat;
+   border: solid 1px darkgreen;
+}
+
+#mu-upload_count {
+	font-weight: normal;
+}
+
+#filelist td.num {
+	background: lightgray;
+}
+
+#filelist a.thumb {
+	width: 60px;
+	height: 60px;
+	display: block;
+	border: solid 1px lightgray;
+}

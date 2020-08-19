@@ -1,0 +1,10 @@
+div.menu{
+position:absolute;
+left:182px;
+top:250px;
+width:550px;
+height:72px;
+z-order:1;
+visibility:hidden;
+background-image:url('images/menu_bg2.gif');
+}

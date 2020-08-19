@@ -1,0 +1,356 @@
+/* Fonts *******************/
+.arial11 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.arial12 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.arial13 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+.arial14 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+.arial15 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 15px;
+}
+.tahoma10 {
+	font-family:Tahoma;
+	font-size: 10px;
+}
+.tahoma11 {
+	font-family:Tahoma;
+	font-size: 11px;
+}
+.tahoma12 {
+	font-family:Tahoma;
+	font-size: 12px;
+}
+.tahoma13 {
+	font-family:Tahoma;
+	font-size: 13px;
+}
+.Verdana10 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+.Verdana11 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.Verdana12 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+/* Colors ******************/
+.grey {
+color:#AEACA6;
+}
+.l-grey {
+	color:#DDD;
+}
+.white {
+color:#FFFFFF;
+}
+.blue {
+color:#003399;
+}
+.red {
+color:#CC0000;
+}
+.black {
+color:#000000;
+}
+
+/* Links ******************/
+a:link {
+	color: #0000FF;
+}
+a:visited {
+	color: #0000FF;
+}
+a:hover {
+	color: #FF6600;
+}
+a.active {
+	color: #FF6600;
+}
+a.urlblack:link {
+	color: #000000;
+	text-decoration: none;
+}
+a.urlblack:visited {
+	color: #000000;
+	text-decoration: none;
+}
+a.urlblack:hover {
+	color: #003399;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #8099AC;
+}
+a.login:link  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-decoration:underline;
+	color: #AEACA6;
+}
+a.login:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-decoration:underline;
+	color: #AEACA6;
+}
+a.login:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-decoration:underline;
+	color: #000000;
+}
+a.Url_red:link  {
+	text-decoration:underline;
+	color: #d00000;
+}
+a.Url_red:visited {
+	text-decoration:underline;
+	color: #d00000;
+}
+a.Url_red:hover {
+	text-decoration:underline;
+	color: #d00000;
+}
+a.Url_active:link  {
+	text-decoration:underline;
+	color: #FF6600;
+}
+a.Url_active:visited {
+	text-decoration:underline;
+	color: #FF6600;
+}
+a.Url_active:hover {
+	text-decoration:underline;
+	color: #FF6600;
+}
+a.buttons:link  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight:bold;
+	text-decoration:none;
+	color: #4D4B4C;
+}
+a.buttons:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight:bold;
+	text-decoration:none;
+	color: #4D4B4C;
+}
+a.buttons:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight:bold;
+	text-decoration:underline;
+	color: #000000;
+}
+
+/* Layouts ******************/
+.block_R {
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #bdbdbd;
+}
+.block_L {
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #bdbdbd;
+}
+.block_T_white {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+}
+.block_Bdot_white {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #FFFFFF;
+}
+.adminTooltip {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #AEACA6;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #E0E0E0;
+	padding: 10px;
+}
+.adminTboard_LR {
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #E0E0E0;
+	border-left-color: #E0E0E0;
+}
+.adminTboard_R {
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #E0E0E0;
+}
+.adminTboard_L {
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #E0E0E0;
+}
+.adminTboard_Bdot {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #E0E0E0;
+}
+.adminTboard_B {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E0E0E0;
+}
+.adminTboard_T {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #E0E0E0;
+}
+.adminTboard_B2 {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+}
+.Tbrd_Bwhite {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+}
+.Tbrd_Twhite {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+}
+.Tbrd_Rwhite {
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFFFFF;
+}
+.Tbrd_RBwhite {
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+}
+h1 {
+	font-weight: normal;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-size: 21px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	display: inline-block;
+	background-color: #FFF;
+}
+H4 {
+	margin-bottom:12px;
+	margin-top:20px;
+	margin-left:4px;
+	}
+#content {
+	padding-left:2px;
+	}
+#content Ul {
+	LIST-STYLE-TYPE: disc; 
+	}
+#content li {
+	height:15px;
+	}
+
+Ul {
+	LIST-STYLE-TYPE: none; 
+	}
+Li {
+height:18px;
+}
+.hmenu_pads {
+	padding-left:5px;
+	padding-right:5px;
+}
+table.dialog{
+width:100%;
+}
+table.dialog td.label{
+width:10%;
+}
+.dialog input{
+width:100%;
+margin-right:5px;
+}
+.dialog input[type=radio]
+{
+width:auto;
+}
+.dialog input[type=checkbox]
+{
+width:auto;
+}
+.dialog textarea{
+width:100%;
+margin-right:5px;
+}
+.dialog .ok
+{
+width:auto;
+}
+.dialog .cancel
+{
+width:auto;
+}
+td.adminTsplitter_up
+{
+	height:4px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #E0E0E0;
+}
+td.adminTsplitter_dn
+{
+	height:4px;
+	border-style: none;
+}
+form.dialog
+{
+margin:0;
+padding:0;
+}
+.dialog form
+{
+margin:0;
+padding:0;
+}
+.dialog th.caption
+{
+padding-top:9px;
+padding-bottom:10px;
+}
+.dialog td.lang{
+width:2%;
+height:26px;
+padding-left:5px;
+padding-right:5px;
+background-color:#d8e9e9;
+color:black;
+text-align:center;
+}
