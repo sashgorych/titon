@@ -31,7 +31,7 @@ section {
     position: relative;
 }
 
-img {
+img {.screenheight .slider-header-container img
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: center;
@@ -892,7 +892,7 @@ nav li:hover ul.drop {
         background: url("../images/icon_arrow-y.svg");
         background-size: cover;
         width: 16px;
-        height: 22px;
+        height: 25px;
         top: 21px;
     }
 
@@ -937,7 +937,7 @@ nav li:hover ul.drop {
         right: 0;
         height: 40px;
         background: url(../images/footer/line-gold-footer-down.svg);
-        background-size: cover;
+        background-size: auto;
     }
 
     nav ul.menu {
@@ -1383,20 +1383,59 @@ nav li:hover ul.drop {
     max-width: 1860px;
     padding: 0 30px;
     margin: auto;
+    background: url("../images/main-page-services-bg.jpg");
+    background-size: cover;
 }
 
+.group.black {
+    text-align: center;
+}
+.group.black .title{
+    background: linear-gradient(to right bottom, #4d3d21, #9d7b3d, #d0af5d, #ffd891, #ffb831, #b78731, #e6b971, #ffd58f, #ddaa5c, #624e2f, #ffcc7e, #805f30);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.group.black .bottom-orange-line{
+    display: none;
+}
+.group.black:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 240px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 26%, rgba(0,0,0,0) 100%);
+    bottom: -200px;
+    left: 0;
+    z-index: 2;
+}
+.group.black{
+    overflow: unset;
+    position: relative;
+    background: url("../images/black-group-v2.jpg");
+    background-size: cover;
+
+}
 .group .title {
     margin-top: 65px;
 }
-
+.group.black .title {
+    margin-top: 0;
+    padding-top: 65px;
+}
 .group .subtitle {
     margin-bottom: 10px;
     font-family: custom2;
 }
-
+.group.black .subtitle {
+    color: white;
+}
 .group .group-items {
     width: 100%;
     margin-bottom: 80px;
+}
+.group.black .group-items {
+    margin-bottom: 0;
+    padding-bottom: 80px;
 }
 
 .group .group-items .group-items-container {
@@ -1438,6 +1477,30 @@ nav li:hover ul.drop {
     width: 100%;
     height: 233px;
     margin-bottom: 30px;
+}
+
+@media screen and (max-width: 690px) {
+    .group.black:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 81px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 0) 100%);
+        bottom: -60px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .group.black:after {
+        height: 81px;
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        bottom: -80px;
+    }
+
+    .group.black {
+        background: url(../images/black-group-mobile.jpg);
+        background-size: cover;
+    }
+
 }
 
 @media screen and (max-width: 1500px) {
@@ -4018,29 +4081,25 @@ footer {
     margin-bottom: 30px;
 }
 
-.block-with-items-lines .group-items .item.hidden {
-    -webkit-transition: max-height .5s ease-out;
-    -o-transition: max-height .5s ease-out;
-    transition: max-height .5s ease-out;
-    max-height: 0;
+.block-with-items-lines .group-items{
     overflow: hidden;
+}
+.block-with-items-lines .group-items .item.hidden {
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+    max-height: 0;
     margin: 0;
     opacity: 0;
-    visibility: hidden;
-    z-index: -222;
 }
 
 .block-with-items-lines .group-items .active .item.hidden {
     max-height: 500px;
     opacity: 1;
-    -webkit-transition: max-height .4s ease-out;
-    -o-transition: max-height .4s ease-out;
-    transition: max-height .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
     margin: 40px 20px 60px 20px;
-    overflow: unset;
-    position: unset;
-    visibility: visible;
-    z-index: 0;
 }
 .block-with-items-lines.light{
     background: url(../images/TITON-ADVANTAGES_BG_image.jpg) no-repeat center;
@@ -4181,6 +4240,11 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
+    .block-with-items-lines .group-items .group-items-container .item a.button-shine{
+        height: 45px;
+        line-height: 45px;
+        font-size: 15px;
+    }
     .second-page .header.frame:before {
         top: 33%;
     }
@@ -8050,6 +8114,7 @@ nav ul.menu li:hover > a {
         content: "";
         position: absolute;
         right: 2px;
+        cursor: pointer;
         top: 16px;
         background: url(../images/icon_arrow-blue.svg) no-repeat;
         background-size: cover;
@@ -8172,8 +8237,8 @@ nav ul.menu li:hover > a {
     }
 
     .menu-mobile-on-desk nav ul li.hasDrop:after, .menu-mobile-on-desk nav ul li.hasDrop-l2:after {
-        background: url("../images/icon_arrow-y.svg");
-        background-size: cover;
+        background: url("../images/icon_arrow-y.svg")no-repeat;
+        background-size: contain;
         width: 16px;
         height: 22px;
         top: 27px;
@@ -8227,7 +8292,7 @@ nav ul.menu li:hover > a {
         right: 0;
         height: 40px;
         background: url(../images/footer/line-gold-footer-down.svg);
-        background-size: cover;
+        background-size: auto;
     }
 
     .menu-mobile-on-desk nav ul.menu {
@@ -8277,10 +8342,15 @@ nav ul.menu li:hover > a {
     }
 
     .menu-mobile-on-desk nav ul.menu li a {
-        display: block;
-        padding: 22px 0px;
-        width: 100% ;
+        /*display: block;*/
+        /*padding: 22px 0px;*/
+        /*width: 100% ;*/
         color: #e1bd7f;
+
+        display: inline-block;
+        padding: 22px 0px;
+        width: auto;
+
     }
 
     .menu-mobile-on-desk nav ul.menu li ul.drop-l2 {
@@ -8334,7 +8404,7 @@ nav ul.menu li:hover > a {
         color: #ffe2b0 !important;
     }
 
-    .menu-mobile-on-desk .hasDrop-l2:hover .drop-l2 li:hover a {
+    .menu-mobile-on-desk .hasDrop-l2:hover .drop-l2 li a:hover {
         color: #ffe2b0 !important;
     }
 
@@ -8469,7 +8539,24 @@ nav ul.menu li:hover > a {
 .real-estate .phone-number svg {
     display: none;
 }
-
+.black-homes .search-btn{
+    background: linear-gradient(135deg, rgba(204,165,96,1) 0%, rgba(238,232,158,1) 40%,  rgba(204,165,96,1) 100%);
+}
+.black-homes .search-filter{
+    background: transparent;
+}
+.black-homes .homes.filters-real-estate .homes-top .left ul li:last-child{
+    background: transparent!important;
+}
+.black-homes .homes.filters-real-estate .block-with-items-lines{
+    background: unset!important;
+}
+.black-homes .homes.filters-real-estate{
+    position: relative;
+    /*background: url('../images/bg-homes.jpg');*/
+    background: url("../images/black-group-v2.jpg");
+    background-size: cover;
+}
 .homes-top {
     margin: 50px auto 0px;
     display: -webkit-box;
@@ -8488,6 +8575,33 @@ nav ul.menu li:hover > a {
 
 .homes-top .button-shine {
     margin: 0 0 0 40px !important;
+}
+.black-homes .homes.filters-real-estate .bottom-orange-line{
+    display: none;
+}
+.black-homes .homes.filters-real-estate:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 26%, rgba(0,0,0,0) 100%);
+    bottom: -100px;
+    left: 0;
+    z-index: 2;
+}
+@media screen and (max-width: 576px){
+    .black-homes .homes.filters-real-estate .block-with-items-lines{
+        padding: 0 30px 0px;
+    }
+    .black-homes .homes.filters-real-estate{
+        background: url('../images/bg-homes-mob.jpg');
+        background-size: cover;
+    }
+    .black-homes .homes.filters-real-estate:after {
+        height: 81px;
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        bottom: -80px;
+    }
 }
 
 .homes-top .left {
@@ -8597,7 +8711,7 @@ nav ul.menu li:hover > a {
     top: 45px;
     position: absolute;
     list-style: none;
-    background-color: #fff;
+    background:transparent;
     color: #757575;
     font-weight: 400;
     font-size: 14px;
@@ -8742,7 +8856,9 @@ nav ul.menu li:hover > a {
     transform: rotate(45deg);
     background-color: #394a6d;
 }
+.filters-real-estate.black + .block-with-items-lines{
 
+}
 .arrow::after {
     left: 5px;
     -webkit-transform: rotate(-45deg);
@@ -12013,6 +12129,11 @@ li.more span p {
     -o-object-fit: cover;
     object-fit: cover; }
 
+@media screen and (max-width: 480px) {
+    .screenheight .slider-header-container img {
+        height: 100%;
+    }
+    }
 @media screen and (max-width: 440px) {
     .real-estate .block-with-items-lines .group-items .item img {
         height: 105px; }
