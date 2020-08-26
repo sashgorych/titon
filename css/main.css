@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 15 version
-*/
-
 @charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -32,7 +25,7 @@ section {
 }
 
 img {.screenheight .slider-header-container img
-    -o-object-fit: cover;
+-o-object-fit: cover;
     object-fit: cover;
     -o-object-position: center;
     object-position: center;
@@ -1392,21 +1385,27 @@ nav li:hover ul.drop {
 }
 .group.black .title{
     background: linear-gradient(to right bottom, #4d3d21, #9d7b3d, #d0af5d, #ffd891, #ffb831, #b78731, #e6b971, #ffd58f, #ddaa5c, #624e2f, #ffcc7e, #805f30);
+    background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 5px #000);
+
 }
 .group.black .bottom-orange-line{
-    display: none;
+    display: block;
+    z-index: 10;
+    height: 0px;
 }
 .group.black:after{
     position: absolute;
     content: "";
     width: 100%;
     height: 240px;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 26%, rgba(0,0,0,0) 100%);
-    bottom: -200px;
     left: 0;
-    z-index: 2;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgb(12, 13, 23) 26%, rgba(0,0,0,0) 100%);
+    bottom: -180px
+
 }
 .group.black{
     overflow: unset;
@@ -1437,7 +1436,10 @@ nav li:hover ul.drop {
     margin-bottom: 0;
     padding-bottom: 80px;
 }
+.group.black .group-items .item img{
+    filter: brightness(300%) saturate(300%) hue-rotate(310deg);
 
+}
 .group .group-items .group-items-container {
     margin: 0 -20px;
     -webkit-flex-wrap: wrap;
@@ -1635,19 +1637,26 @@ nav li:hover ul.drop {
     max-width: 485px;
     width: 33.33333%;
 }
-
-.services .services-container .item:hover .text-container {
+.main-page .services .services-container .item {
+    background: none;
+    padding: 0;
+}
+.main-page .services .services-container .item:hover .text-container {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
-    background-color: #02176c63;
+    background-color: #28395e63;
 }
 
 .services .services-container .item .image-container {
     height: 246px;
     overflow: hidden;
 }
+.main-page .services .services-container-content .item{
+    box-shadow: 1px 1px 8px #000;
+    border-bottom: 0px solid #ebce96;
 
+}
 .services .services-container .item .image-container img {
     width: 100%;
 }
@@ -1656,8 +1665,12 @@ nav li:hover ul.drop {
     padding: 10px 15px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    transition: .3s;
 }
+.main-page .services .services-container .item .text-container{
+    background-color: #02176c63;
 
+}
 .services .services-container .item .text-title {
     margin-top: 10px;
     margin-bottom: 0px;
@@ -1666,7 +1679,10 @@ nav li:hover ul.drop {
     font-size: 36px;
     font-family: custom2;
 }
+.main-page .services .services-container .item .text-title{
+    color: #dfc69a;
 
+}
 .services .services-container .item .text-subtitle {
     letter-spacing: 1px;
     color: #918171;
@@ -1691,7 +1707,7 @@ nav li:hover ul.drop {
     }
 
     .services .services-container-content .item {
-        border-bottom: 1px solid #ebce96;
+        /*border-bottom: 1px solid #ebce96;*/
         width: -webkit-calc(33.3333333% - 20px);
         width: calc(33.3333333% - 20px);
         margin: 0 10px;
@@ -1799,7 +1815,7 @@ nav li:hover ul.drop {
 @media screen and (max-width: 550px) {
     .services .services-container-content .item {
         width: 300px;
-        border-right: 1px solid #ebce96;
+        border: none!important;
     }
 
     .services .services-container-content .item .text-title {
@@ -1856,19 +1872,31 @@ nav li:hover ul.drop {
     max-width: 1920px;
     margin: auto;
 }
+.main-page .advantages{
+    background: url("../images/titon-advantages-v2.jpg") no-repeat center;
 
+}
 .advantages .subtitle {
     line-height: 35px;
     font-family: custom2;
     width: 65%;
     margin: 0 auto 35px auto;
 }
+.main-page .advantages .subtitle{
+    color: #fff;
 
+}
 .advantages .title {
     margin-top: 72px;
     margin-bottom: 20px;
 }
-
+.main-page .advantages .title{
+    background: linear-gradient(to right bottom, #a27930, #dda644, #ffc431, #ffdea3, #e6bc66, #ffda99, #e6b971, #ffd58f, #ddaa5c, #624e2f, #ffcc7e, #805f30);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 5px #000);
+    z-index: 10;
+}
 .advantages .advantages-container {
     text-align: center;
     max-width: 1470px;
@@ -2034,8 +2062,8 @@ nav li:hover ul.drop {
 
 .blog {
     overflow: hidden;
-    background: url("../images/blog_BG.png") no-repeat;
-    background-size: contain;
+    /*background: url("../images/blog_BG.png") no-repeat;*/
+    /*background-size: contain;*/
     background-position-x: -30px;
     position: relative;
     max-width: 1920px;
@@ -2050,14 +2078,20 @@ nav li:hover ul.drop {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    background: url("../images/titon-blog-bg-v2.jpg") no-repeat;
+    background-color: #010310;
+
 }
 
 .blog a {
     text-decoration: none;
+    color: #e8c47c;
+
 }
 
 .blog a:hover {
-    color: #96713e;
+    color: #ffe181;
+
 }
 
 .blog .title {
@@ -2068,6 +2102,11 @@ nav li:hover ul.drop {
     transform: translateX(-50%);
     position: absolute;
     margin-top: 65px;
+    background: linear-gradient(to right bottom, #4d3d21, #9d7b3d, #d0af5d, #eabd6a, #ca9c44, #f2c677, #d9a85c, #ffd58f, #ddaa5c, #d09334, #ffcc7e, #e1a34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 5px #000);
+
 }
 
 .blog .blog-left {
@@ -2076,7 +2115,7 @@ nav li:hover ul.drop {
 }
 
 .blog .blog-right {
-    padding-top: 170px;
+    padding-top: 300px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-right: 30px;
@@ -2085,6 +2124,8 @@ nav li:hover ul.drop {
 }
 
 .blog .blog-right .item {
+    width: 90%;
+
     margin-bottom: 50px;
     border-bottom: 1px solid #b99247;
 }
@@ -2099,11 +2140,12 @@ nav li:hover ul.drop {
 
 .blog .blog-right .item .item-text {
     font-family: harmonia;
-    color: black;
     margin-bottom: 45px;
-    font-size: 21px;
     line-height: 32px;
     width: 85%;
+    color: #c8aa82;
+    font-size: 17px;
+
 }
 
 .blog .blog-right .item p a {
@@ -2126,7 +2168,6 @@ nav li:hover ul.drop {
         -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
         justify-content: flex-start;
-        background: unset;
         position: relative;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -2158,7 +2199,9 @@ nav li:hover ul.drop {
         padding: 0 30px;
         text-align: center;
     }
-
+    .blog .blog-right .item{
+        width: 100%;
+    }
     .blog .title {
         -webkit-transform: unset;
         -ms-transform: unset;
@@ -2189,6 +2232,7 @@ nav li:hover ul.drop {
     margin: auto;
     background: url("../images/testimon_BG.png");
     background-size: 100% 105%;
+    display: none;
 }
 
 .testimonials .title {
@@ -2469,6 +2513,11 @@ nav li:hover ul.drop {
     letter-spacing: 0px;
     text-align: left;
     margin-bottom: 44px;
+    background: linear-gradient(to right bottom, #bd8522, #bd903e, #d2ae53, #eabd6a, #ca9c44, #f2c677, #d9a85c, #ffd58f, #ddaa5c, #d09334, #ffcc7e, #e1a34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 5px #000);
+
 }
 
 .map .top {
@@ -2501,6 +2550,8 @@ nav li:hover ul.drop {
     text-decoration: underline;
     width: 27.3333%;
     cursor: pointer;
+    color: #d2ae6a;
+
     font-family: custom3;
     position: relative;
 }
@@ -2517,17 +2568,19 @@ nav li:hover ul.drop {
 }
 
 .map ul li:hover {
-    color: #96713e;
+    color: #d2ae6a;
+
 }
 
 .map ul li.active {
-    color: #96713e;
+    color: #ffcc64;
 }
 
 .map .map-subtitle {
-    border-bottom: 1px solid #96713e;
+    border-bottom: 1px solid #e8c47c;
     padding-bottom: 6px;
-    color: #96713e;
+    color: #e8c47c;
+
     font-family: custom2;
     font-size: 37px;
 }
@@ -2542,7 +2595,9 @@ nav li:hover ul.drop {
 }
 
 .map .left {
-    background: url("../images/operates_BG.png");
+    /*background: url("../images/operates_BG.png");*/
+    background-color: #040b2d;
+
     background-size: cover;
     padding: 0px 0px 40px 30px;
     -webkit-box-sizing: border-box;
@@ -3063,7 +3118,8 @@ input.error + span {
 
 .icon-reviews {
     width: 125px;
-    margin: 45px auto 40px;
+    margin: 75px auto 20px;
+
     display: block;
 }
 
@@ -3073,14 +3129,16 @@ input.error + span {
     position: relative;
     padding: 0 10px;
     overflow: hidden;
-    min-height: 700px;
     max-width: 1920px;
     margin: auto;
-    background: url("../images/rewiev_BG.png");
-    background-size: contain;
+    min-height: 585px;
+    background: url("../images/reviews-bg-v2.jpg");
+    background-size: cover;
+
 }
 
 .reviews .title {
+    display: none;
     margin-top: 101px;
     font-size: 43px;
 }
@@ -3093,7 +3151,6 @@ input.error + span {
 }
 
 .reviews .review-item {
-    background: white;
     text-align: center;
     min-height: 160px;
     padding: 20px 30px;
@@ -3108,12 +3165,12 @@ input.error + span {
     font-size: 20px;
     line-height: 33px;
     letter-spacing: 1px;
+    color: #fff;
     word-spacing: 1px;
     font-weight: 600;
 }
 
 .reviews .slick-slider .slick-list, .reviews .slick-slider .slick-track {
-    background: white;
 }
 
 .reviews .slick-dots li button:before {
@@ -3148,10 +3205,11 @@ input.error + span {
 }
 
 .reviews .reviews-platform {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    /*display: -webkit-box;*/
+    /*display: -webkit-flex;*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+    display: none;
     width: 100%;
     padding: 3px 22px;
     margin-bottom: 50px;
@@ -3226,7 +3284,9 @@ input.error + span {
     .reviews .reviews-platform a {
         margin: 0 5px;
     }
-
+    .reviews {
+        min-height: 635px;
+    }
     .reviews .reviews-platform img {
         width: 130px;
     }
@@ -3831,6 +3891,7 @@ footer {
     .links-contacts .contacts ul li:nth-child(1) {
         margin-right: 0px;
         margin-bottom: 15px;
+        align-items: center;
     }
 
     .links-contacts .links p {
@@ -7727,14 +7788,17 @@ footer {
     -ms-flex-pack: center;
     justify-content: center;
     overflow: hidden;
-    background: url("../images/real-estate/BG_communities.png");
+    /*background: url("../images/real-estate/BG_communities.png");*/
+    background: linear-gradient(to bottom, #14182f, #010310);
+    background: url("../images/las-vegas-communities-bg-v3c.jpg");
+
     background-size: cover;
 }
 
 .communities .title {
     font-size: 41px;
-    margin-bottom: 40px;
-    margin-top: 55px;
+    margin-bottom: 60px;
+    margin-top: 75px;
 }
 
 .communities .communities-content {
@@ -7797,10 +7861,17 @@ footer {
 }
 
 .about-real-state {
-    padding-bottom: 40px;
     min-height: 330px;
+    padding-bottom: 120px;
+    padding-top: 80px;
 }
+.about-real-state .title{
+    background: linear-gradient(to right bottom, #a27930, #dda644, #ffc431, #ffdea3, #e6bc66, #ffda99, #e6b971, #ffd58f, #ddaa5c, #ac8344, #ffcc7e, #805f30);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 5px #000);
 
+}
 .about-real-state .advantages-container {
     padding: 0 60px;
 }
@@ -7824,7 +7895,7 @@ footer {
 }
 
 .about-real-state .subtitle {
-    width: 100%;
+    width:60%;
 }
 
 .real-estate .block-with-items-lines .item {
@@ -7877,6 +7948,11 @@ footer {
 
 .real-estate .about-real-state {
     background: #0b143d;
+    background: url("../images/about-residential-real-estate-bg-v3.jpg");
+    background-size: cover;
+    background-position: center;
+
+
 }
 
 .real-estate .about-real-state .subtitle {
@@ -8575,19 +8651,24 @@ nav ul.menu li:hover > a {
 
 .homes-top .button-shine {
     margin: 0 0 0 40px !important;
+    color: #311706;
+    text-shadow: 1px 1px 1px #ffffffb5;
+
+
 }
 .black-homes .homes.filters-real-estate .bottom-orange-line{
-    display: none;
+    display: block;
 }
 .black-homes .homes.filters-real-estate:after{
     position: absolute;
     content: "";
     width: 100%;
     height: 140px;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 26%, rgba(0,0,0,0) 100%);
     bottom: -100px;
     left: 0;
-    z-index: 2;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgb(2, 8, 20) 26%, rgba(0,0,0,0) 100%);
+    z-index: -1;
+
 }
 @media screen and (max-width: 576px){
     .black-homes .homes.filters-real-estate .block-with-items-lines{
@@ -8677,6 +8758,8 @@ nav ul.menu li:hover > a {
     top: 7px;
     right: 0px;
     width: 17px;
+    filter: brightness(200%);
+
     height: 7px;
 }
 
@@ -9022,7 +9105,8 @@ li.more span p {
     }
 
     .search-btn svg {
-        fill: white !important;
+        fill: #52340d !important;
+
     }
 
     .search-btn {
@@ -9122,7 +9206,7 @@ li.more span p {
         top: 57px;
     }
     .search-btn svg {
-        fill: white !important;
+        fill: #52340d !important;
     }
 }
 
@@ -9281,7 +9365,10 @@ li.more span p {
         transform: translateX(17px);
     }
 }
-
+.filters-real-estate .homes-content {
+    background: none;
+    background-size: cover;
+}
 .homes-content {
     max-width: 1750px;
     overflow: hidden;
@@ -9290,10 +9377,18 @@ li.more span p {
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    background: url("../images/clouds-bg-v2b.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .homes-content .title {
-    margin-bottom: 50px;
+    background: linear-gradient(to right bottom, #a27930, #dda644, #ffc431, #ffdea3, #e6bc66, #ffda99, #e6b971, #ffd58f, #ddaa5c, #624e2f, #ffcc7e, #805f30);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 5px #000);
+    margin-bottom: 70px;
+    margin-top: 80px;
+
 }
 
 .homes-content .button-shine {
@@ -9325,7 +9420,7 @@ li.more span p {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    margin: 0 -45px;
+    margin: 0px;
 }
 
 .homes-content-block span, .homes-content-block p, .homes-content-block a {
@@ -9343,7 +9438,6 @@ li.more span p {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.35);
-    box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.35);
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -9354,6 +9448,10 @@ li.more span p {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.95);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .homes-content-block .item img {
@@ -9446,11 +9544,13 @@ li.more span p {
 }
 
 .find-luxury-content {
-    background: #0b143d;
+    background: #0a143c;
     overflow: hidden;
     padding: 0 20px 45px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    background: url("../images/hex-bg-v3.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .find-luxury-content .title {
@@ -9463,10 +9563,17 @@ li.more span p {
     margin-bottom: 10px;
     margin-top: 73px;
     text-transform: uppercase;
+    background: linear-gradient(to right bottom, #a27930, #dda644, #ffc431, #ffdea3, #e6bc66, #ffda99, #e6b971, #ffd58f, #ddaa5c, #624e2f, #ffcc7e, #805f30);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 5px #000);
+
 }
 
 .find-luxury-content .subtitle {
-    color: white;
+    color: #eabd76;
+    filter: drop-shadow(1px 1px 3px #000);
+
     margin-bottom: 80px;
     font-size: 37px;
     font-weight: bold;
@@ -9480,7 +9587,7 @@ li.more span p {
 }
 
 .find-luxury-content-items .find-luxury-content-items-container {
-    margin: 0 -35px;
+    margin: 0 0px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -9500,7 +9607,6 @@ li.more span p {
     transition: all .4s ease-out;
     overflow: hidden;
     margin: 0 35px 95px 35px;
-    border: 3px solid #d3ad6e;
     display: block;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -9510,8 +9616,14 @@ li.more span p {
     max-width: 510px;
     cursor: pointer;
     position: relative;
+    border: 0px solid #d3ad6e;
+    box-shadow: 2px 2px 8px #000;
+    border-radius: 10px;
 }
+.homes{
+    background-color: #14182f;
 
+}
 .find-luxury-content-items .item img {
     -webkit-transition: all .4s ease-out;
     -o-transition: all .4s ease-out;
@@ -10566,7 +10678,7 @@ li.more span p {
     height: 450px;
     width: 300px;
     left: 25px;
-    top: 0;
+    top: 20px;
     background: url("../images/left_frame_part.svg");
     background-size: 100% 100%;
     -webkit-filter: brightness(112%);
@@ -10581,7 +10693,7 @@ li.more span p {
     height: 450px;
     width: 300px;
     right: 25px;
-    bottom: 40px;
+    bottom: 30px;
     background: url("../images/right_frame_part.svg");
     background-size: 100% 100%;
     -webkit-filter: brightness(112%);
@@ -12133,7 +12245,7 @@ li.more span p {
     .screenheight .slider-header-container img {
         height: 100%;
     }
-    }
+}
 @media screen and (max-width: 440px) {
     .real-estate .block-with-items-lines .group-items .item img {
         height: 105px; }
@@ -12516,6 +12628,10 @@ b.menu-custom-text{
 }
 .dark-form .title {
     color: #d2ae6a!important;
+    background: linear-gradient(to right bottom, #4d3d21, #9d7b3d, #d0af5d, #eabd6a, #ca9c44, #f2c677, #d9a85c, #ffd58f, #ddaa5c, #d09334, #ffcc7e, #e1a34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 5px #00000091);
 }
 .light-form{
     background: url(../images/TITON-ADVANTAGES_BG_image.jpg) no-repeat center!important;
@@ -13670,4 +13786,335 @@ body.ov-h{
 }
 body.ov-h{
     overflow: hidden;
+}
+
+.real-estate .bottom-orange-line,.main-page .bottom-orange-line {
+    height: 7px;
+}
+
+@media screen and (min-width: 1280px) {
+    footer {
+        background-color: #010310;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .footer-logo img {
+        width: 200px;
+
+    }
+
+    .phone-number-footer a {
+        font-size: 65px;
+    }
+
+    .phone-number-footer:hover a {
+        color: #fff;
+    }
+
+    .links-contacts {
+        max-width: 700px;
+    }
+
+    .links-contacts .links p {
+        font-size: 25px;
+    }
+
+    .links-contacts .contacts .address {
+        max-width: 58px;
+    }
+
+    .links-contacts .contacts span {
+        font-size: 19px;
+    }
+
+    .links-contacts .contacts svg {
+        width: 75px;
+        height: 40px;
+        margin-left: -8px;
+    }
+
+    .links-contacts .contacts .email span {
+        font-size: 19px;
+        margin-left: 2px;
+
+    }
+
+    .links-contacts .contacts .email:hover span {
+        color: #fff;
+        text-decoration: underline;
+
+    }
+
+    .links-contacts .contacts .email a {
+        text-decoration: none;
+    }
+
+    .links-contacts .contacts li:last-child {
+        align-items: center;
+
+    }
+
+    .newsletter .text {
+        width: 90%;
+        margin: 0 auto;
+
+    }
+}
+.blog .title span{
+    display: block;
+}
+.copyright span{
+    display: inline-block;
+}
+@media screen and (max-width: 480px) and (min-width: 360px){
+    .nav-mobile.active + .menu-lines {
+        width: 360px;
+    }
+
+    nav ul.menu {
+        max-width: 260px;
+    }
+
+    .nav-mobile.active {
+        left: 318px;
+    }
+}
+.communities .communities-content .col li a {
+    color: #f0ce9f;
+    text-shadow: 1px 1px 3px #000;
+}
+.communities .title {
+    margin-bottom: 40px;
+    margin-top: 70px;
+    background: linear-gradient(to right bottom, #a27930, #caa056, #f0c65d, #ffdea3, #e6bc66, #ffda99, #e6b971, #ffd58f, #ddaa5c, #e8ae55, #ffcc7e, #dfab61);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 5px #000);
+
+}
+@media screen and (max-width: 480px) {
+    .about-real-state .load-more {
+        font-size: 17px;
+    }
+    .main-page .advantages {
+        min-height: 480px;
+    }
+    .main-page .advantages .subtitle {
+        z-index: 111;
+        position: relative;
+    }
+    .group.black .group-items {
+        padding-bottom: 40px;
+    }
+    .group.black:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 240px;
+        left: 0;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgb(12, 13, 23) 26%, rgba(0,0,0,0) 100%);
+        bottom: -180px;
+    }
+    .group .group-items .group-items-container {
+        margin: 0 -20px;
+    }
+    .group .group-items .group-items-container .item {
+        min-width: 170px;
+    }
+    .group .group-items .group-items-container .item img {
+        height: 110px;
+        width: 110px;
+    }
+    .group .group-items .group-items-container .item a.button-shine {
+        font-size: 12px;
+    }
+    .group .group-items .item {
+        margin: 40px 10px 20px 10px;
+    }
+    .group.black .title {
+        background: linear-gradient(to right bottom, #4d3d21, #9d7b3d, #d0af5d, #ffd891, #ffb831, #b78731, #e6b971, #ffd58f, #f4c887, #f0b354, #ffcc7e, #d28d2b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .main-page .advantages .title {
+        background: linear-gradient(to right bottom, #a27930, #dda644, #ffc431, #ffdea3, #e6bc66, #ffda99, #e6b971, #ffd58f, #ddaa5c, #d99c3f, #ffcc7e, #b78339);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 0px;
+    }
+    .new-services { min-height: 1960px !important; }
+    .communities {
+        background-size: 300% 100% !important;
+        background: url('../images/las-vegas-real-estate-bg-v2.jpg');
+        background-position: -500px 0px;
+    }
+    .find-luxury-content {
+        background-size: auto;
+        background-repeat: repeat;
+    }
+    .main-page .services .services-container {
+        margin: 0 auto;
+    }
+    .blog .title span {
+        display: block;
+    }
+
+    .copyright span {
+        display: block;
+    }
+
+    .filters-real-estate .homes-content .title {
+        margin-top: 40px;
+        background: linear-gradient(to right bottom, #a27930, #dda644, #ffc431, #ffdea3, #e6bc66, #ffda99, #e6b971, #ffd58f, #eebd73, #c18c38, #ffcc7e, #805f30);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .homes-top {
+        margin: 35px auto 10px;
+    }
+
+    .black-homes .homes.filters-real-estate .block-with-items-lines {
+        padding: 0 30px 50px;
+    }
+
+    .find-luxury-content .title {
+        margin-top: 52px;
+        background: linear-gradient(to right bottom, #a27930, #dda644, #ffc431, #ffdea3, #e6bc66, #ffda99, #e6b971, #ffd58f, #ddaa5c, #d9a960, #eece9c, #d9a458);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .homes .homes-content .title {
+        margin-bottom: 40px;
+        margin-top: 50px;
+        background: linear-gradient(to right bottom, #a27930, #dda644, #e6b668, #ffdea3, #e6bc66, #ffda99, #e6b971, #ffd58f, #eebd73, #d9a047, #ffcc7e, #c89853);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .homes-content {
+        padding: 0px 10px 40px;
+    }
+    .about-real-state {
+        padding-bottom: 50px;
+        padding-top: 60px;
+        min-height: unset;
+        background-size: 240% 130% !important;
+    }
+    .main-page .advantages .title {
+        background: linear-gradient(to right bottom, #a27930, #caa056, #f0c65d, #ffdea3, #e6bc66, #ffda99, #e6b971, #ffd58f, #ddaa5c, #e8ae55, #ffcc7e, #dfab61);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .communities {
+        background: url('../images/las-vegas-real-estate-bg-v2.jpg');
+        background-size: 300% 100% !important;
+        background-position: -500px 0px;
+    }
+
+
+
+    footer {
+        background-size: cover;
+
+    }
+    .blog .title {
+        background: linear-gradient(to right bottom, #d9b06a, #d9b169, #d0af5d, #eabd6a, #ffcb67, #f2c677, #d9a85c, #ffd58f, #ddaa5c, #d09334, #ffcc7e, #e1a34a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .black-homes .homes.filters-real-estate {
+        background: url('../images/las-vegas-real-estate-bg-v2.jpg');
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    .about-real-state .load-more {
+        font-size: 17px;
+    }
+
+}
+.new-services {
+    min-height: 1040px;
+    padding: 20px 100px 20px 100px;
+}
+.new-services .services-container-content{
+    flex-wrap: wrap;
+}
+.new-services .services-container-content .item{
+    margin-bottom: 35px;
+}
+.new-services .services-container .item .text-subtitle{
+    font-size: 23px;
+}
+
+@media screen and (max-width: 1281px) {
+    .new-services.new-frame:before, .new-services.new-frame:after {
+        height: 360px;
+        width: 200px;
+    }
+    .new-services {
+        padding: 140px 115px;
+    }
+    .new-services .services-container-content {
+        align-items: stretch;
+        margin: 0;
+        flex-direction: row;
+        padding: 0px;
+    }
+    .new-services .services-container-content .item:after {
+        content: unset;
+    }
+    .new-services .services-container-content .item {
+        background-color: #02176c63;
+        padding: 0px;
+        margin: 35px 0 0px 0;
+        min-width: 280px;
+        width: 48%;
+    }
+    .new-services .services-container .item .text-container{
+        background: unset;
+    }
+    .new-services .services-container-content .item:before{
+        content: unset;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .new-services {
+        padding: 75px 45px;
+    }
+    .new-services .services-container .item .text-title{
+        font-size: 25px;
+    }
+    .new-services .services-container .item .text-subtitle{
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .new-services {
+        padding: 20px 35px;
+    }
+    .new-services .services-container-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .new-services .services-container-content .item {
+        min-width: 280px;
+        width: 100%;
+        max-width: 350px;
+    }
+    .services .services-container-content .item .image-container{
+        height: 220px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .new-services {
+        padding: 0px 15px;
+    }
+    .services .services-container-content .item .image-container {
+        height: 185px;
+    }
 }
